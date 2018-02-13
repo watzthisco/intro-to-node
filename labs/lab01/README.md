@@ -1,1 +1,3 @@
-See the lab book for step-by-step instructions for completing this lab.
+# Lab 01 - Getting Started with Node and npm
+
+See the labs book for instructions.

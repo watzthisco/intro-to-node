@@ -10,7 +10,7 @@ makeTimeoutsPromises = (time) => {
 			}
 		}, time);
 	});
-}
+};
 
 makeTimeoutsPromises(1000)
 .then(x=>{

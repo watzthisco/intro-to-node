@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/watzthisco/intro-to-node#readme",
   "devDependencies": {
+    "promise": "^8.0.1",
     "semver": "^5.3.0"
   },
   "dependencies": {

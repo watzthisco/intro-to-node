@@ -11,14 +11,17 @@ const server = http.createServer(function(req, res) {
 	res.statusCode = 200;
 	res.setHeader('Content-Type', 'text/plain');
 	////////////////////////////////////////////////////////////////////////////
-	var myReadStream = fs.createReadStream(__dirname + '/MobyDicklette.txt', 'utf8')
-
-		.pipe(makePig,{end: false})
-        .pipe(makeBig,{end: false})
-        .pipe(res,{end: false});
-
-    ////////////////////////////////////////////////////////////////////////////
-	//res.end('Hello World!\n');
+	var myReadStream = fs.createReadStream(__dirname + '/MobyDick.txt', 'utf8')
+		.on('end', function(){ //readable streams have 'end'
+			console.log('done reading');
+		})
+		.pipe(makePig)
+        .pipe(makeBig)
+        .pipe(res)
+		.on('finish',function(){ //writable streams have 'finish'
+			console.log('finished!');
+			process.exit(0);
+	})
 });
 
 server.listen(port, hostname, function() {

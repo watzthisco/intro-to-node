@@ -1,5 +1,4 @@
-console.log('starting...');
-for (var i=1; i<11; i++){
-    console.log(i);
-}
-console.log('Done!');
+const fs = require('fs');
+let content = fs.readFileSync('file.md', 'utf-8');
+console.log(content);
+console.log("Done!");

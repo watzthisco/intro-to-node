@@ -1,9 +1,5 @@
-console.log('starting...');
-
-process.nextTick(function(){
-    for (var i=1; i<11; i++){
-        console.log(i);
-    }
+const fs = require('fs');
+let content = fs.readFile('file.md', 'utf-8', function(err,data){
+  console.log(data);
 });
-
-console.log('Done!');
+console.log("Done!");

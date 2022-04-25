@@ -1,2 +1,1 @@
-# Lab03
-Getting Started with npm
+# Lab 03: First Look at Asynchronous Code

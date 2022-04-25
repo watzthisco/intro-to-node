@@ -1,1 +1,0 @@
-emitter.emit(event, [args]);

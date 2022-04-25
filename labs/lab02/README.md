@@ -1,1 +1,1 @@
-See the lab book for step-by-step instructions for completing this lab.
+Lab 02: Getting Started with npm

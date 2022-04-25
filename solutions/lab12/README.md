@@ -1,1 +1,0 @@
-# a bot that posts Hello, World to a room.

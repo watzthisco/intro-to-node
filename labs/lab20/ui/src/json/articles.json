@@ -1,0 +1,12 @@
+[{
+    "title":"How to do Something",
+    "description":"An article about doing something",
+    "body": "this is the body",
+    "tagList": "something"
+},
+{
+    "title":"How to do Something else",
+    "description":"An article about doing something else",
+    "body": "this is also the body",
+    "tagList": "something else"
+}]

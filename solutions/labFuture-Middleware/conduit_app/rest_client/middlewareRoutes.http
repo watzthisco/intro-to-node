@@ -1,0 +1,36 @@
+
+GET http://localhost:3000/api/articles
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/api/articles/126553
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/api
+
+### this is an error
+
+GET http://localhost:3000/
+
+###
+PUT http://localhost:3000/api/articles/126553
+Content-Type: application/json
+
+{
+    "author": "Agent 007"
+}
+
+###
+GET http://localhost:3000/api/articles
+Content-Type: application/json
+
+###
+PUT http://localhost:3000/api/articles/123456
+Content-Type: application/json
+
+{
+    "title": "The put method"
+}

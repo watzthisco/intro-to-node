@@ -1,0 +1,19 @@
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/articles
+
+###
+POST http://localhost:3000/articles
+
+###
+PUT http://localhost:3000/articles
+
+###
+DELETE http://localhost:3000/articles
+
+###
+GET http://localhost:3000/users
+
+###
+

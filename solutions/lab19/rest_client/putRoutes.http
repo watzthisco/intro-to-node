@@ -1,0 +1,28 @@
+
+GET http://localhost:3000/articles
+Content-Type: application/json
+
+###
+
+PUT http://localhost:3000/articles/126553
+Content-Type: application/json
+
+{
+    "author": "007"
+}
+
+###
+GET http://localhost:3000/articles
+Content-Type: application/json
+
+###
+PUT http://localhost:3000/articles/123456
+Content-Type: application/json
+
+{
+    "title": "The put method"
+}
+
+###
+GET http://localhost:3000/articles
+Content-Type: application/json

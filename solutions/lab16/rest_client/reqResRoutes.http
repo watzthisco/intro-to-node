@@ -1,0 +1,20 @@
+
+GET http://localhost:3000/articles/125011
+
+
+###
+POST http://localhost:3000/articles
+Content-Type: application/json
+
+{
+    "title":"What is REST?",
+    "description":"An article about REST services",
+    "body": "REST is an acronym for REpresentational State Transfer and an architectural style for distributed hypermedia systems. Roy Fielding first presented it in 2000 in his famous dissertation. Like other architectural styles, REST has its guiding principles and constraints. These principles must be satisfied if a service interface needs to be referred to as RESTful",
+    "tagList": "REST",
+    "author": "James Bond"
+}
+
+###
+
+DELETE http://localhost:3000/articles/123456
+Content-Type: application/json

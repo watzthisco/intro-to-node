@@ -1,0 +1,20 @@
+
+GET http://localhost:3000/articles
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:3000/articles/125011
+Content-Type: application/json
+
+###
+GET http://localhost:3000/articles
+Content-Type: application/json
+
+###
+DELETE http://localhost:3000/articles/123456
+Content-Type: application/json
+
+###
+GET http://localhost:3000/articles
+Content-Type: application/json

@@ -1,6 +1,9 @@
 # Webstorm
 .idea/
 
+# Test Directory
+solutions-test
+
 # Logs
 logs
 *.log

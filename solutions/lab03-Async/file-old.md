@@ -1,1 +1,0 @@
-Here is some text here is some text.

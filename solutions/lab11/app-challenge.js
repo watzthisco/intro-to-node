@@ -1,17 +1,20 @@
 var http = require('http');
+const https = require('https');
+
 var urlToGet = process.argv[2];
+const proto = !urlToGet.charAt(4).localeCompare('s') ? https : http;
 
 var output;
-http.get(urlToGet, function(response) {
-
-    response.on("data", function(chunk) {
-        output += chunk.toString();
+proto
+  .get(urlToGet, function (response) {
+    response.on('data', function (chunk) {
+      output += chunk.toString();
     });
-    response.on("end", function(){
-        console.log(output);
-        console.log("output length: " + output.length);
+    response.on('end', function () {
+      console.log(output);
+      console.log('output length: ' + output.length);
     });
-
-}).on('error', function(e) {
-    console.log("Got error: " + e.message);
-});
+  })
+  .on('error', function (e) {
+    console.log('Got error: ' + e.message);
+  });

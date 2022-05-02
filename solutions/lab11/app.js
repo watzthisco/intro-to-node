@@ -1,6 +1,6 @@
-var http = require('http');
+const http = require('http');
 const https = require('https');
-var urlToGet = process.argv[2];
+const urlToGet = process.argv[2];
 
 const proto = !urlToGet.charAt(4).localeCompare('s') ? https : http;
 

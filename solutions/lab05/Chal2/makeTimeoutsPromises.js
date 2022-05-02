@@ -1,32 +1,36 @@
-var Promise = require('promise');
+const Promise = require('promise');
 
 makeTimeoutsPromises = (time) => {
-	return new Promise((resolve, reject) => {
-		setTimeout(() =>{
-			if (Math.random() > 0.8) {
-				reject('Fail!');
-			} else {
-				resolve(Math.floor(Math.random() * 5000));
-			}
-		}, time);
-	});
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (Math.random() > 0.8) {
+        reject('Fail!');
+      } else {
+        resolve(Math.floor(Math.random() * 5000));
+      }
+    }, time);
+  });
 };
 
 makeTimeoutsPromises(1000)
-.then(x=>{
-	console.log(x);
-	return makeTimeoutsPromises(x);})
-.done(x=>{
-	console.log(x);
-	return makeTimeoutsPromises(x);})
-.then(x=>{
-	console.log(x);
-	return makeTimeoutsPromises(x);})
-.then(x=>{
-	console.log(x);
-	return makeTimeoutsPromises(x);})
-.then(x=>console.log(x))
-.catch(x=>console.error(x));
+  .then((x) => {
+    console.log(x);
+    return makeTimeoutsPromises(x);
+  })
+  .done((x) => {
+    console.log(x);
+    return makeTimeoutsPromises(x);
+  })
+  .then((x) => {
+    console.log(x);
+    return makeTimeoutsPromises(x);
+  })
+  .then((x) => {
+    console.log(x);
+    return makeTimeoutsPromises(x);
+  })
+  .then((x) => console.log(x))
+  .catch((x) => console.error(x));
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///

@@ -1,7 +1,5 @@
-var fs = require('fs');
-var makePig = require('./makePig');
+const fs = require('fs');
+const makePig = require('./makePig');
 
-// var myWriteStream = fs.createWriteStream(__dirname + '/WriteMe.txt');
-process.stdin
-	.pipe(makePig)
-	.pipe(process.stdout);
+// let myWriteStream = fs.createWriteStream(__dirname + '/WriteMe.txt');
+process.stdin.pipe(makePig).pipe(process.stdout);

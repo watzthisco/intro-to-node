@@ -1,15 +1,24 @@
-var fs = require('fs');
-var makeTransformer = require('./makeTransformer');
+const fs = require('fs');
+const makeTransformer = require('./makeTransformer');
 
-var mobyTransformer = makeTransformer(new RegExp(/Moby\s*Dick/), (process.argv[2] || 'Moby Dick'));
-var ishmaelTransformer = makeTransformer(new RegExp(/Ishmael/), (process.argv[3] || 'Ishmael'));
-var ahabTransformer = makeTransformer(new RegExp(/Ahab/), (process.argv[2] || 'Ahab'));
+const mobyTransformer = makeTransformer(
+  new RegExp(/Moby\s*Dick/),
+  process.argv[2] || 'Moby Dick'
+);
+const ishmaelTransformer = makeTransformer(
+  new RegExp(/Ishmael/),
+  process.argv[3] || 'Ishmael'
+);
+const ahabTransformer = makeTransformer(
+  new RegExp(/Ahab/),
+  process.argv[2] || 'Ahab'
+);
 
-var myReadStream = fs.createReadStream(__dirname + '/MobyDick.txt', 'utf8');
-var myWriteStream = fs.createWriteStream(__dirname + '/WriteMe.txt');
+let myReadStream = fs.createReadStream(__dirname + '/MobyDick.txt', 'utf8');
+let myWriteStream = fs.createWriteStream(__dirname + '/WriteMe.txt');
 
 myReadStream
-	.pipe(mobyTransformer)
-	.pipe(ishmaelTransformer)
-	.pipe(ahabTransformer)
-    .pipe(process.stdout);
+  .pipe(mobyTransformer)
+  .pipe(ishmaelTransformer)
+  .pipe(ahabTransformer)
+  .pipe(process.stdout);
